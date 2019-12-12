@@ -15,11 +15,26 @@
     <link rel="stylesheet" href="CSS/siteStyle.css">
 
     <!--- Including sidemenu --->
+    <!--- results in error (inspect element for more details)
+    <!---
     <script> 
         $(function(){
-            $("#sideMenu").load("menu/menu.html"); 
+            $("#sideMenu").load("/menu/menu.html"); 
         });
     </script> 
+    --->
+
+    <!--- Including sidemenu (2) --->
+    <script>
+        $.ajax({
+           url: "/menu/menu.html",
+           dataType: "html",
+           success: function(html) {
+              $("#sideMenu").html(html);
+              $.getScript("/menu/menu.js");
+           }
+        });
+    </script>
 </head>
 
 <body>
