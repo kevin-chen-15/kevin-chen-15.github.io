@@ -14,11 +14,18 @@
     <!--- Link to own stylesheet and javascript --->
     <link rel="stylesheet" href="CSS/siteStyle.css">
     <script type="text/javascript" src="indexJavaScript.js"></script>
+
+    <!--- Including sidemenu --->
+    <script> 
+        $(function(){
+            $("#sideMenu").load("menu/menu.html"); 
+        });
+    </script> 
 </head>
 
 <body>
 
-<div w3-include-html="menu/menu.html"></div> 
+<div id="sideMenu"></div> 
 
 <div id="main">
     <div class="jumbotron text-center">
