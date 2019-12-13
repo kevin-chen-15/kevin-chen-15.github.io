@@ -13,20 +13,41 @@
 
     <!--- Link to own stylesheet and javascript --->
     <link rel="stylesheet" href="CSS/siteStyle.css">
+
+    <!--- Including sidemenu --->
+    <!--- results in error (inspect element for more details)
+    <!---
+    <script> 
+        $(function(){
+            $("#sideMenu").load("/menu/menu.html"); 
+        });
+    </script> 
+    --->
+
+    <!--- Including sidemenu (2) --->
+    <script>
+        $.ajax({
+           url: "./menu/menu.html",
+           dataType: "html",
+           success: function(html) {
+              $("#sideMenu").html(html);
+              $.getScript("./menu/menu.js");
+           }
+        });
+    </script>
 </head>
 
 <body>
-
-<?php include "menu/menu.html"; ?>
 
 <div id="main">
     <div class="jumbotron text-center">
         <h1>Example Home Page</h1>
         <p>Testing content</p> 
     </div>
-
-    <span onclick="openNav()">open sidemenu</span>
-
+    <div id="sideMenu">
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()">open sidemenu</span>
+    </div> 
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -47,6 +68,8 @@
         </div>
     </div>
 </div>
+
+
 
 </body>
 
