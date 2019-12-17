@@ -13,9 +13,10 @@
 
     <!--- Link to own stylesheet and javascript --->
     <link rel="stylesheet" href="CSS/siteStyle.css">
+    <script type="text/javascript" src="./indexJavaScript.js"></script>
 
     <!--- Including sidemenu --->
-    <!--- results in error (inspect element for more details)
+    <!--- results in error (inspect element for more details) --->
     <!---
     <script> 
         $(function(){
@@ -23,31 +24,21 @@
         });
     </script> 
     --->
-
-    <!--- Including sidemenu (2) --->
-    <script>
-        $.ajax({
-           url: "./menu/menu.html",
-           dataType: "html",
-           success: function(html) {
-              $("#sideMenu").html(html);
-              $.getScript("./menu/menu.js");
-           }
-        });
-    </script>
 </head>
 
 <body>
+
+<div w3-include-html="menu/menu.html"></div> 
 
 <div id="main">
     <div class="jumbotron text-center">
         <h1>Example Home Page</h1>
         <p>Testing content</p> 
     </div>
-    <div id="sideMenu">
-        <!-- Use any element to open the sidenav -->
-        <span onclick="openNav()">open sidemenu</span>
-    </div> 
+
+
+    <span onclick="openNav()">open sidemenu</span>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -69,7 +60,9 @@
     </div>
 </div>
 
-
+<script>
+    includeHTML();
+</script>
 
 </body>
 
