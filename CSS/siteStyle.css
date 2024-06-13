@@ -48,3 +48,7 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 } 
+
+#open_menu_button {
+    background-color:DodgerBlue;	
+}
