@@ -1,0 +1,71 @@
+<head>
+	<link rel="stylesheet" href="bracket.css">
+</head>
+<body>
+	<div w3-include-html="../menu/menu.html"></div> 
+
+	<script>
+	    includeHTML();
+	</script>
+	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
+	<div class="tournament-container">
+		<div class="tournament-headers">
+			<h3>Section A</h3>
+			<h3>Section B</h3>
+			<h3>Finals</h3>
+			<h3>Section C</h3>
+			<h3>Section D</h3>
+		</div>
+
+		<div class="tournament-brackets">
+			<ul class="bracket bracket-1">
+				<li class="team-item">Team 1</li>
+				<li class="team-item">Team 2</li>
+				<li class="team-item">Team 3</li>
+				<li class="team-item">Team 4</li>
+			</ul>  
+			<ul class="bracket bracket-2">
+				<li class="team-item">Team 1 or Team 2</li>
+				<li class="team-item">Team 3 or Team 4</li>
+			</ul>  
+			<ul class="bracket bracket-3">
+				<li class="team-item">Winner of Section A & B or Winner of Section C & D</li>
+			</ul>  
+			<ul class="bracket bracket-4">
+				<li class="team-item">Team 5 or 6</li>
+				<li class="team-item">Team 7 or 8</li>
+			</ul>  
+
+			<ul class="bracket bracket-5">
+				<li class="team-item">Team 5</li>
+				<li class="team-item">Team 6</li>
+				<li class="team-item">Team 7</li>
+				<li class="team-item">Team 8</li>
+			</ul>  
+		</div>
+	</div>
+	<p>
+	<div class="team-info">
+	  
+	</div>
+	<p>
+	<div class="winners">
+		<b>The Winner of Section A Match 1</b><p>
+		<form>
+			<select id="section-a-1" name="a-1-winner">
+				<option value="1">Team 1</option>
+				<option value="2">Team 2</option>
+			</select>
+		</form>
+		<p>
+		<b>The Winner of Section A Match 2</b><p>
+		<form>
+			<select id="section-a-2" name="a-2-winner">
+				<option value="3">Team 3</option>
+				<option value="4">Team 4</option>
+			</select>
+		</form>
+		<p>
+	</div>
+	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
+</body>
