@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kevin's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- Bootstrap requirements --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--- Link to own stylesheet and javascript --->
+    <link rel="stylesheet" href="CSS/siteStyle.css">
+    <link rel="stylesheet" href="brackets/brackets.css">
+    <script type="text/javascript" src="./indexJavaScript.js"></script>
+    <script type="text/javascript" src="./menu/menu.js"></script>
+
+    <!--- Including sidemenu --->
+    <!--- results in error (inspect element for more details) --->
+    <!---
+    <script> 
+        $(function(){
+            $("#sideMenu").load("/menu/menu.html"); 
+        });
+    </script> 
+    --->
+</head>
 <body>
 	<div w3-include-html="../menu/menu.html"></div> 
 	
@@ -73,3 +102,4 @@
 	
 	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
 </body>
+</html>
