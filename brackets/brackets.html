@@ -37,67 +37,84 @@
 	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
 	
 	<div class="brackets-page">
-		<div class="tournament-container">
-			<div class="tournament-headers">
-				<h3>Section A</h3>
-				<h3>Section B</h3>
-				<h3>Finals</h3>
-				<h3>Section C</h3>
-				<h3>Section D</h3>
-			</div>
-	
-			<div class="tournament-brackets">
-				<ul class="bracket bracket-1">
-					<li class="team-item">Team 1</li>
-					<li class="team-item">Team 2</li>
-					<li class="team-item">Team 3</li>
-					<li class="team-item">Team 4</li>
-				</ul>  
-				<ul class="bracket bracket-2">
-					<li class="team-item">Team 1 or Team 2</li>
-					<li class="team-item">Team 3 or Team 4</li>
-				</ul>  
-				<ul class="bracket bracket-3">
-					<li class="team-item">Winner of Section A & B or Winner of Section C & D</li>
-				</ul>  
-				<ul class="bracket bracket-4">
-					<li class="team-item">Team 5 or 6</li>
-					<li class="team-item">Team 7 or 8</li>
-				</ul>  
-	
-				<ul class="bracket bracket-5">
-					<li class="team-item">Team 5</li>
-					<li class="team-item">Team 6</li>
-					<li class="team-item">Team 7</li>
-					<li class="team-item">Team 8</li>
-				</ul>  
-			</div>
+		<div class='tournament'>
+			<ul class='round round-3'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'>Team 1</li>
+				<li class='game-left spacer region region-right'>Section A</li>
+				<li class='game-left game-bottom'>Team 2</li>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'>Team 3</li>
+				<li class='game-left spacer region region-right'>Section B</li>
+				<li class='game-left game-bottom'>Team 4</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-4'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'>Team 1 or 2</li>
+				<li class='game-left spacer'>&nbsp;</li>
+				<li class='game-left game-bottom'>Team 3 or 4</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round semi-final'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'>Team 1, 2, 3, or 4</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round finals'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game final'>Overall Winner</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round semi-final'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'>Team 5, 6, 7, or 8</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-4'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'>Team 5 or 6</li>
+				<li class='game-right spacer'>&nbsp;</li>
+				<li class='game-right game-bottom'>Team 7 or 8</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-3'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'>Team 5</li>
+				<li class='game-right spacer region region-left'>Section C</li>
+				<li class='game-right game-bottom'>Team 6</li>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'>Team 7</li>
+				<li class='game-right spacer region region-left'>Section D</li>
+				<li class='game-right game-bottom'>Team 8</li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
 		</div>
 		<p>
 		<div class="team-info">
-		  
+			Information about Teams To Be Added
 		</div>
 		<p>
 		<div class="winners">
-			<b>The Winner of Section A Match 1</b><p>
+			<b>The Winner of Section A</b><p>
 			<form>
-				<select id="section-a-1" name="a-1-winner">
+				<select id="section-a" name="a-winner">
 					<option value="1">Team 1</option>
 					<option value="2">Team 2</option>
 				</select>
 			</form>
 			<p>
-			<b>The Winner of Section A Match 2</b><p>
+			<b>The Winner of Section B</b><p>
 			<form>
-				<select id="section-a-2" name="a-2-winner">
+				<select id="section-b" name="b-winner">
 					<option value="3">Team 3</option>
 					<option value="4">Team 4</option>
 				</select>
 			</form>
 			<p>
-			<b>The Winner of Section D Match 1</b><p>
+			<b>The Winner of Section C</b><p>
 			<form>
-				<select id="section-d-1" name="d-1-winner">
+				<select id="section-c" name="c-winner">
 					<option value="5">Team 5</option>
 					<option value="6">Team 6</option>
 				</select>
@@ -105,7 +122,7 @@
 			<p>
 			<b>The Winner of Section D Match 2</b><p>
 			<form>
-				<select id="section-d-2" name="d-2-winner">
+				<select id="section-d" name="d-winner">
 					<option value="7">Team 7</option>
 					<option value="8">Team 8</option>
 				</select>
