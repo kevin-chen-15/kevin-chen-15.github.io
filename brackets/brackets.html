@@ -26,6 +26,34 @@
         });
     </script> 
     --->
+    <!--- Web Storage Testing --->
+    <script>
+	function clickCounter() {
+		if (typeof(Storage) !== "undefined") {
+			if (localStorage.clickcount) {
+				localStorage.clickcount = Number(localStorage.clickcount)+1;
+			} else {
+				localStorage.clickcount = 1;
+			}
+			document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+			} else {
+			document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+			}
+	}
+
+	function clickReset() {
+		if (typeof(Storage) !== "undefined") {
+			if (localStorage.clickcount) {
+				localStorage.clickcount = 0;
+			} else {
+				localStorage.clickcount = 0;
+			}
+				document.getElementById("result").innerHTML = "The counter has been set back to 0.";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+			}
+	}
+    </script>
 </head>
 <body>
 	<div w3-include-html="../menu/menu.html"></div> 
@@ -157,7 +185,9 @@
 			<p>Submit Button To Be Added</p>
 		</div>
 	</div>
-	
+	<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+	<p><button onclick="clickReset()" type="button">Reset me!</button></p>
+	<div id="result"></div>
 	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
 </body>
 </html>
