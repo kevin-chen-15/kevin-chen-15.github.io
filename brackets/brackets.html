@@ -26,6 +26,24 @@
         });
     </script> 
     --->
+	<script>
+		const teamScore = {
+			"Team 1": 8,
+			"Team 2": 7,
+			"Team 3": 6,
+			"Team 4": 5,
+			"Team 5": 4,
+			"Team 6": 3,
+			"Team 7": 2,
+			"Team 8": 1
+		}
+		
+		const testteamScore = {"Team 1": 5, "Team 2": 1, "Team 3": 8, "Team 4": 2, "Team 5": 5, "Team 6": 4, "Team 7": 3, "Team 8": 6}
+		
+		$.each(testteamScore,function(key,value){
+			$('#ranking-section').append("<span>"+key +": "+value+"</span>")
+		});
+	</script>
 </head>
 <body>
 	<div w3-include-html="../menu/menu.html"></div> 
@@ -35,7 +53,11 @@
 	</script>
 	
 	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
+	<b>Rankings</b>
 	
+	<div class="ranking-section">
+		
+	</div>
 	<div class="brackets-page">
 		<div class='tournament'>
 			<ul class='round round-3'>
