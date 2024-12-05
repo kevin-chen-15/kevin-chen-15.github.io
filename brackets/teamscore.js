@@ -14,5 +14,5 @@ var testteamScore = {"Team 1": 5, "Team 2": 1, "Team 3": 8, "Team 4": 2, "Team 5
 var organizedScore = Object.entries(testteamScore).sort((a, b) => b[1] - a[1])
 
 $.each(organizedScore,function(key,value){
-  $('#ranking_section').append(key +": "+ value + "<p>")
+  $('#ranking_section').append(value[0] +": "+ value[1] + "<p>")
 });
