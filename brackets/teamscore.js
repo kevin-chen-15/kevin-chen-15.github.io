@@ -9,7 +9,7 @@
   "Team 8": 1
 }*/
 
-var testteamScore = {"Team 1": 5, "Team 2": 1, "Team 3": 8, "Team 4": 2, "Team 5": 5, "Team 6": 4, "Team 7": 3, "Team 8": 6}
+var testteamScore = {"DEVICE": 7, "PACER": 5, "CAPECOD": 6, "REMAP-CAP": 5, "ACORN": 8, "PROPHY-VAP": 4, "NICO": 6, "VENT-AVOID": 5}
 
 var organizedScore = Object.entries(testteamScore).sort((a, b) => b[1] - a[1])
 
