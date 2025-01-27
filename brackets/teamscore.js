@@ -1,12 +1,12 @@
 var teamScore = {
-  "Team 1": 8,
-  "Team 2": 7,
-  "Team 3": 6,
-  "Team 4": 5,
-  "Team 5": 4,
-  "Team 6": 3,
-  "Team 7": 2,
-  "Team 8": 1
+  "ACORN": 8,
+  "DEVICE": 7,
+  "CAPECOD": 6,
+  "NICO": 5,
+  "VENT-AVOID": 4,
+  "REMAP-CAP": 3,
+  "PACER": 2,
+  "PROPHY-VAP": 1
 }
 
 /*var testteamScore = {"DEVICE": 7, "PACER": 5, "CAPECOD": 6, "REMAP-CAP": 5, "ACORN": 8, "PROPHY-VAP": 4, "NICO": 6, "VENT-AVOID": 5}*/
