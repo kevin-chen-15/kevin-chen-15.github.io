@@ -1,4 +1,4 @@
-/*var teamScore = {
+var teamScore = {
   "Team 1": 8,
   "Team 2": 7,
   "Team 3": 6,
@@ -7,11 +7,11 @@
   "Team 6": 3,
   "Team 7": 2,
   "Team 8": 1
-}*/
+}
 
-var testteamScore = {"DEVICE": 7, "PACER": 5, "CAPECOD": 6, "REMAP-CAP": 5, "ACORN": 8, "PROPHY-VAP": 4, "NICO": 6, "VENT-AVOID": 5}
+/*var testteamScore = {"DEVICE": 7, "PACER": 5, "CAPECOD": 6, "REMAP-CAP": 5, "ACORN": 8, "PROPHY-VAP": 4, "NICO": 6, "VENT-AVOID": 5}*/
 
-var organizedScore = Object.entries(testteamScore).sort((a, b) => b[1] - a[1])
+var organizedScore = Object.entries(teamScore).sort((a, b) => b[1] - a[1])
 
 document.getElementById("score").innerHTML = Object.entries(organizedScore)[0][1][0]
 document.getElementById("score1").innerHTML = Object.entries(organizedScore)[1][1][0]
