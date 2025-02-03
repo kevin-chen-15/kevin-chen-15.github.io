@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kevin's Bracket Maker Feature</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- Bootstrap requirements --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--- Link to own stylesheet and javascript --->
+    <link rel="stylesheet" href="../CSS/siteStyle.css">
+    <link rel="stylesheet" href="../brackets/brackets.css">
+    <script type="text/javascript" src="../indexJavaScript.js"></script>
+    <script type="text/javascript" src="../menu/menu.js"></script>
+
+    <!--- Including sidemenu --->
+    <!--- results in error (inspect element for more details) --->
+    <!---
+    <script> 
+        $(function(){
+            $("#sideMenu").load("/menu/menu.html"); 
+        });
+    </script> 
+    --->
+</head>
+<body>
+	<div w3-include-html="../menu/menu.html"></div> 
+	
+	<script>
+		includeHTML();
+	</script>
+	
+	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
+	
+	<div class="brackets-page">
+    
+		<div class='tournament'>
+			<ul class='round round-3'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'><input type="text"></li>
+				<li class='game-left spacer region region-right'><input type="text" style="font-weight: bold;"></li>
+				<li class='game-left game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'><input type="text"></li>
+				<li class='game-left spacer region region-right'><input type="text" style="font-weight: bold;"></li>
+				<li class='game-left game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-4'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'><input type="text"></li>
+				<li class='game-left spacer'>&nbsp;</li>
+				<li class='game-left game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round semi-final'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-left game-top'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round finals'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game final'>Overall Winner: <input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round semi-final'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-4'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'><input type="text"></li>
+				<li class='game-right spacer'>&nbsp;</li>
+				<li class='game-right game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+			<ul class='round round-3'>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'><input type="text"></li>
+				<li class='game-right spacer region region-left'><input type="text" style="font-weight: bold;"></li>
+				<li class='game-right game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+				<li class='game-right game-top'><input type="text"></li>
+				<li class='game-right spacer region region-left'><input type="text" style="font-weight: bold;"></li>
+				<li class='game-right game-bottom'><input type="text"></li>
+				<li class='spacer'>&nbsp;</li>
+			</ul>
+		</div>
+		<p>
+		<!---
+		<div class="team-info">
+			<b>Team Information</b><p>
+			<form>
+				<select id="information" name="information">
+					<option value="1">Team 1</option>
+					<option value="2">Team 2</option>
+					<option value="3">Team 3</option>
+					<option value="4">Team 4</option>
+					<option value="5">Team 5</option>
+					<option value="6">Team 6</option>
+					<option value="7">Team 7</option>
+					<option value="8">Team 8</option>
+				</select>
+			</form><p>
+			Information about Teams To Be Added
+		</div>
+		<p>
+		<div class="winners">
+			<b>The Winner of Section A</b><p>
+			<form>
+				<select id="section-a" name="a-winner">
+					<option value="1">Team 1</option>
+					<option value="2">Team 2</option>
+				</select>
+			</form>
+			<p>
+			<b>The Winner of Section B</b><p>
+			<form>
+				<select id="section-b" name="b-winner">
+					<option value="3">Team 3</option>
+					<option value="4">Team 4</option>
+				</select>
+			</form>
+			<p>
+			<b>The Winner of Section C</b><p>
+			<form>
+				<select id="section-c" name="c-winner">
+					<option value="5">Team 5</option>
+					<option value="6">Team 6</option>
+				</select>
+			</form>
+			<p>
+			<b>The Winner of Section D</b><p>
+			<form>
+				<select id="section-d" name="d-winner">
+					<option value="7">Team 7</option>
+					<option value="8">Team 8</option>
+				</select>
+			</form>
+			<p>
+		</div>
+		<div class="submission">
+			<form>
+				<label for="name">Name:</label><br>
+				<input type="text" id="name" name="name" value="Default Name"><br>
+				<label for="email">E-Mail:</label><br>
+				<input type="text" id="email" name="email" value="Default@Default.Com"><br>
+				<label for="institute">Institution:</label><br>
+				<input type="text" id="institute" name="institute" value="Default Institute"><br>
+				<label for="training">Training Level:</label><br>
+				<input type="text" id="training" name="training" value="Default Level"><br>
+			</form>
+
+			<p>Submit Button To Be Added</p>
+		</div>
+		-->
+		
+		<!---
+		<p>
+		<form action="formProcess.php" method="post">
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name" value="Default Name"><br>
+			<input type="submit" value="Submit">
+		</form>
+		--->
+	</div>
+	<div id="open_menu_button"><span onclick="openNav()"><b>Open Side Menu</b></span></div>
+</body>
+</html>
