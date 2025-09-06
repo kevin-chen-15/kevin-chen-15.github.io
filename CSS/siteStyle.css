@@ -47,8 +47,19 @@
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-} 
+}
 
 #open_menu_button {
-    background-color: #007bfe;
+    background-color:DodgerBlue;	
+}
+
+/*W3 School's Dark/Light mode colors*/
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
