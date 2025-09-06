@@ -10,3 +10,9 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 } 
+
+//W3 School's Dark/Light Mode function
+function darkModeFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
